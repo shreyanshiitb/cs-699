@@ -1,0 +1,23 @@
+\begin{theindex}
+
+  \item {fun1}
+    \subitem {python\+\_\+problem}, \hyperpage{3}
+  \item {fun2}
+    \subitem {python\+\_\+problem}, \hyperpage{4}
+  \item {fun3}
+    \subitem {python\+\_\+problem}, \hyperpage{4}
+
+  \indexspace
+
+  \item {make}
+    \subitem {python\+\_\+problem}, \hyperpage{5}
+
+  \indexspace
+
+  \item {python\+\_\+problem}, \hyperpage{3}
+    \subitem {fun1}, \hyperpage{3}
+    \subitem {fun2}, \hyperpage{4}
+    \subitem {fun3}, \hyperpage{4}
+    \subitem {make}, \hyperpage{5}
+
+\end{theindex}

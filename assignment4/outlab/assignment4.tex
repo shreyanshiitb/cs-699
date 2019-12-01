@@ -1,0 +1,160 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{titling}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[document]{ragged2e}
+\usepackage{multirow}
+\usepackage{multicol}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{sample.bib}
+
+\begin{document}
+\title{\textbf{Software lab 4: \\
+{\Large Tex Lab}}}
+\author{Team Codigos}
+\date{\today}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\newpage
+\newpage
+\begin{figure}[!h]
+\includegraphics[width= 200pt]{LifePray.png}
+\centering
+\caption{Flowchart of a theist Life}
+\label{fig:xyz}
+\end{figure}
+
+\qquad{} Figure 1 above refers to a funny conundrum theists are believed to be living in by the atheists. This is just a joke I picked up from some forum, not taking sides, not even a bit. This is how scared social media has made us, We can not pick sides. Moving on . . . . You need to know how to cite papers in \LaTeX{}. For e.g. you are talking about research on Indowordnet \cite{pushpak}, in that case such a citation must be used near a name. In case you need to quote the authors of a paper in a statement, instead of citing them against a topic or word or a line, you need to use a different kind of citation methodology.
+\newpage
+
+\begin{table}[]
+    \caption{Table depicting the use of both mulitcolumn and multirow}
+    \bigskip
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | }
+         \cline{3-11}
+         \multicolumn{2}{c}{} & \multicolumn{5}{| c |}{\textbf{Basic Properties}} & \multicolumn{4}{| c |}{\textbf{Readability}}\\
+         \cline{3-11}
+         \multicolumn{2}{c|}{} & \textbf{WC} & \textbf{SC} & \textbf{C-W} & \textbf{S-W} & \textbf{W-S} & \textbf{FK} & \textbf{GF} & \textbf{SMOG} & \textbf{LEX}\\
+         \hline
+         \multirow{2}{*}{\textit{Baseline}} & Mean & 0.84 & 0.41 & \textbf{0.56} & \textbf{0.46} & \textbf{0.55} & \textbf{0.60} & 0.56 & 0.57 & 0.63 \\
+         \cline{2-11}
+         & SD & 0.07 & 0.08 & 0.06 & 0.07 & 0.05 & 0.05 & 0.06 & 0.07 & 0.05 \\
+         \hline
+         \hline
+         \multirow{2}{*}{\textit{ScaComp_p}} & Mean & 0.89 & 0.46 & 0.53 & 0.43 & 0.53 & 0.58 & 0.54 & 0.56 & 0.62 \\
+         \cline{2-11}
+         & SD & 0.05 & 0.08 & 0.05 & 0.06 & 0.06 & 0.05 & 0.05 & 0.06 & 0.05 \\
+         \hline
+         \hline
+         \multirow{2}{*}{\textit{ScaComp_l}} & Mean & \textbf{0.92} & \textbf{0.48} & 0.55 & 0.45 & 0.53 & 0.59 & \textbf{0.58} & \textbf{0.61} & \textbf{0.64} \\
+         \cline{2-11}
+         & SD & 0.04 & 0.07 & 0.05 & 0.04 & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 \\
+         \hline
+    \end{tabular}
+    \label{tab:1}
+\end{table}
+
+
+\qquad{} To combine rows a package must be imported with in your preamble, then you can use the XXXXXXX command in your document, I did it. The table below includes mathematical notations, which you can produce by embedding the experession in \$ \$ delimiters. For subscript, use underscore and for superscript, use carrot.
+
+
+\bigskip
+\qquad {\Large In table 1 above, we try to demonstrate all the features required to be demonstrated in a table. We use multiple newline, we use a package to enable the use of multiple rows, and multiple columns in the table. Additionally, We have also drawn lines from specific column to column. We also use box resizing with a width specifier for resizing the box within the limits of the document, and avoid any overflow. }
+
+\bigskip
+\qquad Now, we will import images side by side in the same document.
+\newpage
+\begin{figure}
+\parbox{5cm}{
+\includegraphics[width=5cm]{and1.jpg}
+\caption{Screenshot: Mobile Interface}
+\label{fig:2figsA}}
+\qquad
+\begin{minipage}{5cm}
+\includegraphics[width=5cm]{and2.jpg}   
+\caption{Screenshot: Generated Notification}
+\label{fig:2figsB}
+\end{minipage}
+\end{figure}
+\bigbreak
+
+\quad The images have been put in, and they are side by side in the same document on the same page. We have used the package floatrow and graphicx to import images on Page 3. The images are from an Android application I made for a project last semester. The table above are values from an experiment we are doing in our lab. I am adding an mathematical equation now just for the sake of it, because I think this is the only thing left to be demonstrated.
+\newline
+$$NLL = - \sum_{i=1}^{N} log(P(s_{i})) \RaggedRight (1)$$  
+where s\textsubscript{i} is the length of the $i^{th}$ saccade.
+\bigbreak
+\quad This text will refer to Equation 1 above. In case you would like to
+see an alternative method to align the images, for instance images as
+subfigures, let me try to do it.
+\newpage
+
+\begin{figure}
+\centering
+\parbox{5cm}{
+\includegraphics[width=5cm, height=3cm]{img1.jpg}
+\captionsetup{(a) Caption 1}
+\centering
+\label{fig:2figsA}}
+\qquad
+\begin{minipage}{5cm}
+\includegraphics[width=5cm, height=3cm]{img2.jpg}   
+\captionsetup{(b) Caption 2}
+\centering
+\label{fig:2figsB}
+\end{minipage}
+\caption{Caption for this figure with two images}
+\end{figure}
+\bigbreak
+\quad This is another alternative to posting images in a \LaTeX{}Document,
+although you would still want me to put them in a table, since ‘The
+Document’ had them in a table. Let me try to do that.
+\bigbreak
+\begin{figure}[h!]
+\centering
+\parbox{5cm}{
+\includegraphics[width=5cm, height=3cm]{img3.jpg}
+\centering
+\label{fig:2figsA}}
+\begin{minipage}{5cm}
+\includegraphics[width=5cm, height=3cm]{img3.jpg}   
+\centering
+\label{fig:2figsB}
+\end{minipage}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\parbox{5cm}{
+\includegraphics[width=5cm, height=3cm]{img4.jpg}
+\centering
+\label{fig:2figsA}}
+\begin{minipage}{5cm}
+\includegraphics[width=5cm, height=3cm]{img4.jpg}   
+\centering
+\label{fig:2figsB}
+\end{minipage}
+\end{figure}
+\bigbreak
+\quad Now, that we have all the possible ways multiple images can be aligned in the table. We will conclude this document with the final section.
+\newpage
+\section*{Conclusion}
+\bigbreak
+This document comprehensively demonstrated the capabilities of \LaTeX{}as
+a document typesetting / desktop publishing package. We have used
+various font size / family settings, we have used verbatim to display
+Latex code in a latex document, image settings, sections, subsections,
+references using labels, mathamatical equations, notations, use of ‘dia’
+for creating a diagram / flowchart etc. I hope this suffices the need
+of learning basic L \LaTeX{}. I hope you also notice that the last section i.e.
+Conclusion on Page 5 is unnumbered and displays the use of something.
+\bigbreak
+
+\printbibliography
+
+\end{document}
